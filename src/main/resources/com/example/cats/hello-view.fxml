@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cats.HelloController">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="5.0" style="-fx-background-color: yellow;">
+         <children>
+            <CheckBox fx:id="multiplayerCheck" focusTraversable="false" mnemonicParsing="false" onAction="#onP2Click" text="Player2 on" />
+            <TextField fx:id="player2IP" focusTraversable="false" prefColumnCount="10" text="10.201.2.13" />
+            <Label text=":" />
+            <TextField fx:id="player2Port" focusTraversable="false" prefColumnCount="3" text="678" />
+            <Label fx:id="info" maxWidth="1.7976931348623157E308" text="Ok." HBox.hgrow="ALWAYS" />
+            <Label fx:id="player1Port" text="Player1 on port  678" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox>
+         <children>
+            <Pane fx:id="pane" onKeyPressed="#onKeyPressed" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: lightgray; -fx-border-color: black;">
+               <children>
+                  <ImageView fx:id="ivP1" fitHeight="128.0" fitWidth="128.0" focusTraversable="true" layoutX="64.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/cat1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="ivP2" fitHeight="128.0" fitWidth="128.0" layoutX="508.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/cat0.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <VBox fx:id="cicak">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
